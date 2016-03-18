@@ -8,7 +8,8 @@ point['y'] = 6
 dictionary = {}
 dictionary['apple'] = 'яблоко'
 
-l = []
+l = [2,6]
+
 l.append(5)
 l.append(6)
 for i in range(100):

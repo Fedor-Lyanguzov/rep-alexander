@@ -23,9 +23,12 @@ balls = [a, b, c, d]
 def distance(a,b):
     return ((a.x-b.x)**2+(a.y-b.y)**2)**0.5
 
+def is_crossing(a,b):
+    return a.r+b.r >= distance(a,b)
+
 for b1 in balls:
     for b2 in balls:
-        if b1 is not b2 and b1.r+b2.r >= distance(b1,b2):
+        if b1 is not b2 and is_crossing(b1,b2):
             print(b1.x, b1.y, b2.x, b2.y)
 #print(a.r)
 #print(a.r)
